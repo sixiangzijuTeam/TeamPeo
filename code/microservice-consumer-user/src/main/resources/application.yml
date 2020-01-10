@@ -1,0 +1,12 @@
+#服务启动访问端口
+server:
+  port: 7901
+#服务注册的名字  
+spring:
+  application:
+    name: movier-consumer
+#服务注册路径
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
