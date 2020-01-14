@@ -1,18 +1,22 @@
 #服务启动访问端口
 server:
-  port: 7910
+  port: 7911
   
 #spring cloud 数据库连接等相关配置
 spring:
   jpa:
      generate-ddl: false
-     show-sql: true
-     hibernate:
-        ddl-auto: none
+#     show-sql: true
+#     hibernate:
+#        ddl-auto: none
   datasource:
-     platform: h2
-     schema: classpath:schema.sql
-     data: classpath:data.sql  application:    name: user-client
+     driver-class-name: com.mysql.jdbc.Driver
+     url: jdbc:mysql://127.0.0.1:3306/mylianxi
+     username: root
+     password: root
+#     platform: h2
+#     schema: classpath:schema.sql
+#     data: classpath:data.sql  application:    name: user-client
 #日志管理
 logging:  level:    root: INFO
     org.hibernate: INFO
