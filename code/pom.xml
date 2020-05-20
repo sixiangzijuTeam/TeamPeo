@@ -12,6 +12,11 @@
 		<module>microservice-consumer-user</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-eureka</module>
+		<module>microservice-websocket-9940</module>
+		<module>microservice-interceptor-9950</module>
+		<module>microservice-rabbitmq-9960</module>
+		<module>microservice-fileupdown-9970</module>
+		<module>microservice-print-9810</module>
 	</modules>
 	
 	<parent>

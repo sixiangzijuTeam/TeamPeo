@@ -2,6 +2,8 @@ package com.itmuch.cloud.controller;
 
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,8 +29,15 @@ public class TestController {
 	}
 	
 	 @RequestMapping("/info")
-    public String Hello(){
-        return "hello xxx，this is demo-client1 messge";
+    public String Hello(HttpServletRequest request){
+		 String str="";
+		 if (request.getHeader("x-forwarded-for") == null) { 
+			 str= request.getRemoteAddr() +1; 
+		  } else {
+			  str=request.getHeader("x-forwarded-for")+2; 
+		  }
+		
+        return "hello xxx，this is demo-client1 messge:"+str;
     }
 	 
 	 @RequestMapping("/producerHello")

@@ -1,0 +1,7 @@
+#服务启动访问端口
+server:
+  port: 9810
+#服务注册的名字  
+spring:
+  application:
+    name: microservic-print-9810
